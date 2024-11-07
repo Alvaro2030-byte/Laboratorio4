@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #f0f0f0;
+            z-index: 1; 
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            width: 400px;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+        }
+        
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .opciones {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .opciones label {
+            display: flex;
+            align-items: center;
+        }
+        
+        .opciones input[type="radio"],
+        .opciones input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        
+        .opciones {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            
+        }
+        
+        .opciones label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .opciones input[type="radio"],
+        .opciones input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;   
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="img/Captura.PNG" alt="Mi foto" width="1000" height="200">
+    <div class="mi-imagen">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acercade.html">Biografia</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <div class="section">
+        <a href="#top" class="back-to-top">
+            <i class="fas fa-arrow-up"></i> </a>
+    </div>
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+
+    <body>
+
+        <h1>Formulario de Contacto</h1>
+
+        <form id="contactoForm">
+
+            <label for="nombre">Nombre (máximo 20 caracteres):</label>
+            <input type="text" id="nombre" name="nombre" maxlength="20" required>
+
+            <label for="apellido">Apellido (máximo 20 caracteres) :</label>
+            <input type="text" id="apellido" name="apellido" maxlength="20" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="ejemplo: 111-234-5678" onfocus="this.placeholder = ''">
+
+            <label for="edad">Edad mínimo 16 y máximo 120 años:</label>
+            <input type="number" id="edad" name="edad" min="16" max="120">
+
+            <label for="direccion">Dirección:</label>
+            <textarea id="direccion" name="direccion"></textarea>
+
+            <label for="provincia">Provincia:</label>
+            <input type="text" id="provincia" name="provincia" list="provincias">
+
+            <datalist id="provincias">
+                <option value="Neuquén">
+                <option value="Río Negro">
+                <option value="Chubut">
+                <option value="Santa Cruz">
+                <option value="Tierra del Fuego">
+            </datalist>
+
+            <label for="codigoPostal">Código Postal
+                (A1234ABC):</label>
+            <input type="text" id="codigoPostal" name="codigoPostal" pattern="[A-Z]\d{4}[A-Z]{3}">
+
+            <fieldset>
+                <label>
+                    Correo electrónico
+                    <input type="radio" name="contacto" value="email" checked>
+                </label>
+                <label>
+                    Correo postal
+                    <input type="radio" name="contacto" value="postal">
+                </label>
+                <label>
+                    Teléfono
+                    <input type="radio" name="contacto" value="telefono">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label>
+                    Noticias
+                    <input type="checkbox" name="suscripcion" value="noticias">
+                </label>
+                <label>
+                    Promociones
+                    <input type="checkbox" name="suscripcion" value="promociones">
+                </label>
+                <label>
+                    Alertas
+                    <input type="checkbox" name="suscripcion" value="alertas" checked>
+                </label>
+                <label>
+                    Eventos
+                    <input type="checkbox" name="suscripcion" value="eventos">
+                </label>
+            </fieldset>
+
+            <button type="submit">Cargar</button>
+        </form>
+
+        <h2>Resumen de tu solicitud</h2>
+
+        <table>
+            <tr>
+                <th>Campo</th>
+                <th>Valor</th>
+            </tr>
+            <th>Apellido</th>
+            <th></th>
+            </tr>
+            <th>Email</th>
+            <th></th>
+            </tr>
+            <th>Teléfono</th>
+            <th></th>
+            </tr>
+            <th>Edad</th>
+            <th></th>
+            </tr>
+            <tr>
+                <th>Dirección</th>
+                <th></th>
+            </tr>
+            <th>Provincia</th>
+            <th></th>
+            </tr>
+            <th>Código Postal</th>
+            <th></th>
+        </table>
+
+</html>

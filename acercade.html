@@ -1,26 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>MI PRIMERA PAGINA</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biografía</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <h1>Biografía</h1>
-        
-    </header>
+    <img id="logo" src="img/logoCurza.png" alt="Logo CURZA">
     <nav>
-    <a href="index.html">Inicio</a>
-    <a href="contacto.html">Formulario de Contacto</a>
-
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="acercade.html">Biografía</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
-    <main>
-        Hola soy Alvaro Javier Garcia, me encuentro actualmente cursando la Tecnicatura Universitaria Desarrollo Web, desde el nodo de Ingeniero Jacobacci.
-
-        <img src="img/foto.jpg" alt="Mi foto" width="400" height="400"> <class="mi-imagen">  
-        </main>
-    <footer>
-        <p>&copy;2024 _Universidad Nacional Del Comahue _Localidad : Ingeniero Jacobacci _Laboratorio N°2.</p>
-    </footer>
+  </header>
+  <main>
+    <section id="acerca-de">
+      <p class="sticky-text">LABORATORIO 4</p>
+      <p>Hola soy Alvaro Javier Garcia, me encuentro actualmente cursando la Tecnicatura Universitaria Desarrollo Web, desde el nodo de Ingeniero Jacobacci.</p>
+      <img src="img/foto.jpg" alt="Mi foto" width="400" height="400">
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Universidad Nacional Del Comahue - Localidad: Ingeniero Jacobacci - Laboratorio N°2.</p>
+    <a href="#" class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
