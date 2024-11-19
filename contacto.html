@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Contacto</title>
+
+    <script src="script.js"></script>
     <style>
         header {
             position: fixed;
@@ -96,15 +98,19 @@
 </head>
 
 <body>
-    <img src="img/Captura.PNG" alt="Mi foto" width="1000" height="200">
     <div class="mi-imagen">
     </div>
     <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acercade.html">Biografia</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+        <img src="img/Captura.PNG" alt="Mi foto" width="1000" height="200">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="acercade.html">Biografia</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
     </nav>
     <div class="section">
         <a href="#top" class="back-to-top">
@@ -188,34 +194,35 @@
             <button type="submit">Cargar</button>
         </form>
 
+        <script>
+        <script src="script.js"></script>    
+
         <h2>Resumen de tu solicitud</h2>
 
-        <table>
+        <table id="data-table">
             <tr>
                 <th>Campo</th>
                 <th>Valor</th>
             </tr>
-            <th>Apellido</th>
-            <th></th>
+                <th>Apellido</th>
+                <td id="ApellidoValue"></td>
             </tr>
-            <th>Email</th>
-            <th></th>
+                <th>Email</th>
+                <td id="EmailValue"></td>
             </tr>
-            <th>Teléfono</th>
-            <th></th>
+                <th>Teléfono</th>
+                <td id="TeléfonoValue"></th>
             </tr>
-            <th>Edad</th>
-            <th></th>
+                <th>Edad</th>
+                <td id="EdadValue"></th>
             </tr>
-            <tr>
                 <th>Dirección</th>
-                <th></th>
+                <td id="DirecciónValue"></th>
             </tr>
-            <th>Provincia</th>
-            <th></th>
+                <th>Provincia</th>
+                <td id="ProvinciaValue"></th>
             </tr>
-            <th>Código Postal</th>
-            <th></th>
-        </table>
-
+                <th>CódigoPostal</th>
+                <td id="CódigoPostalValue"></th>
+            </tr>
 </html>

@@ -6,8 +6,10 @@
   <title>Biografía</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-
-    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+      .cv-completo {
+            display: none; 
+        }
   </style>
 </head>
 <body>
@@ -24,10 +26,48 @@
   </header>
   <main>
     <section id="acerca-de">
-      <p class="sticky-text">LABORATORIO 4</p>
+      <p class="sticky-text">LABORATORIO 5</p>
       <p>Hola soy Alvaro Javier Garcia, me encuentro actualmente cursando la Tecnicatura Universitaria Desarrollo Web, desde el nodo de Ingeniero Jacobacci.</p>
       <img src="img/foto.jpg" alt="Mi foto" width="400" height="400">
     </section>
+        <p> Currículum abreviado : Dedicado a la informática y a la creación de soluciones digitales . 
+          <button id="leer-mas">Leer más</button></p>
+          <div class="cv-completo">
+              <h2>Mi Currículum Vitae:</h2>
+              <p><strong>Extracto profesional: 
+                </strong></p>
+              <ul>
+                  <li>
+                    9 años de trabajo en un canal de televisión y streaming en el que
+                    administraba la operación técnica,realizaba el mantenimiento de las computadoras, el manejo de redes   sociales (Community Manager) y la puesta al aire de los programas. Años: desde el 2012 al 2020. 
+                    _3 años de técnico operativo en empresa ISP en instalación de internet de fibra óptica. Años: desde el 2020 al 2023.</li> </ul>
+              <p><strong>Educación: </strong></p>
+              <ul>
+                  <li>
+                    Nivel Primario: completo egresado de la Escuela N°: 356 en el año 2006.
+                    Nivel Medio: completo Egresado del Centro Educativo De Nivel Secundario N°18 en orientación Perito en Ciencias Agrarias Año 2015.
+                    Actualmente me encuentro cursando dos Tecnicatura en la Universidad Nacional Del Comahue, estas son : desarrollo web y administración en Sistemas y Software Libre.
+                    </li> </ul>
+              <p><strong>Aptitud y conocimientos : </strong></p>
+              <ul>
+                  <li>
+                    Uso de programas de edición de video audio e imagen.
+                    Diseño Técnico Industrial.
+                    Mantenimiento y reparación de computadoras.
+                    Manejo de páginas web y
+                    Redes Sociales.
+                    </li> </ul>    
+              <p><strong>Cursos realizados : </strong></p>
+              <ul>
+                  <li>
+                    DIAGNÓSTICO Y MANTENIMIENTO DE COMPUTADORAS,
+                    DISEÑO TÉCNICO INDUSTRIAL
+                    INSTITUCIÓN QUE LOS OTORGA:
+                    INFORMATIC TRAINING CENTER
+                    AÑO: 2016
+                  </li> </ul>        
+              </div>
+          </section>
   </main>
   <footer>
     <p>&copy; 2024 Universidad Nacional Del Comahue - Localidad: Ingeniero Jacobacci - Laboratorio N°2.</p>
@@ -35,6 +75,16 @@
       <i class="fas fa-arrow-up"></i>
     </a>
   </footer>
-  <script src="script.js"></script>
+
+<script>
+const botonLeerMas = document.getElementById('leer-mas');
+const cvCompleto = document.querySelector('.cv-completo');
+
+botonLeerMas.addEventListener('click', () => {
+    cvCompleto.style.display = 'block';
+    botonLeerMas.style.display = 'none';
+});
+</script>
 </body>
 </html>
+
