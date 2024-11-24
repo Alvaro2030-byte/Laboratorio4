@@ -95,3 +95,17 @@ footer {
 .fas {
     font-size: 24px;
 }
+
+#juego {
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+}
+
+#piedra-papel-tijera {
+  display: none; 
+}
+
+#piedra, #papel, #tijera {
+  cursor: pointer;
+}

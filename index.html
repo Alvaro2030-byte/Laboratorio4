@@ -3,6 +3,7 @@
 <head>
     <title>Mi primera pagina</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -20,6 +21,15 @@
         <section id="acerca-de">
             <p class="sticky-text">LABORATORIO 4</p>
             </section>
+            <section id="juegos">
+                <h2>Juegos</h2>
+                <a href="#" id="jugar-piedra-papel-tijera">¡Juega Piedra, Papel o Tijera!</a>
+                <section id="piedra-papel-tijera" style="display: none;"> <button id="piedra">Piedra</button>
+                    <button id="papel">Papel</button>
+                    <button id="tijera">Tijera</button>
+                    <div id="resultado"></div>
+                </section>
+            </section>
     </main>
     <footer>
         <p>&copy; 2024 Universidad Nacional del Comahue - Localidad: Ingeniero Jacobacci - Laboratorio N°2</p>
@@ -27,7 +37,42 @@
             <i class="fas fa-arrow-up"></i>
         </a>
     </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+const botonJuego = document.getElementById('jugar-piedra-papel-tijera');
+const seccionJuego = document.getElementById('piedra-papel-tijera');
+const btnPiedra = document.getElementById('piedra');
+const btnPapel = document.getElementById('papel');
+const btnTijera = document.getElementById('tijera');
+const resultado = document.getElementById('resultado');
 
+function obtenerEleccionComputadora() {
+    const opciones = ['piedra', 'papel', 'tijera'];
+    const indiceAleatorio = Math.floor(Math.random() * opciones.length);
+    return opciones[indiceAleatorio];
+}
+
+function jugar(eleccionJugador) {
+    const eleccionComputadora = obtenerEleccionComputadora();
+
+    if (eleccionJugador === eleccionComputadora) {
+    resultado.textContent = "¡Empate!";
+    } else if (
+    (eleccionJugador === 'piedra' && eleccionComputadora === 'tijera') ||
+    (eleccionJugador === 'papel' && eleccionComputadora === 'piedra') ||
+    (eleccionJugador === 'tijera' && eleccionComputadora === 'papel')
+    ) {
+    resultado.textContent = "¡Ganaste!";
+    } else {
+    resultado.textContent = "¡Perdiste!";
+    }
+}
+
+botonJuego.addEventListener('click', () => {
+    seccionJuego.style.display = 'block';
+});
+
+btnPiedra.addEventListener('click', () => jugar('piedra'));
+btnPapel.addEventListener('click', () => jugar('papel'));
+btnTijera.addEventListener('click', () => jugar('tijera'));       
+    </script>
+    </body></html>
