@@ -10,15 +10,17 @@ backToTop.addEventListener('click', () => {
 const formulario = document.getElementById('contactoForm');
 const tablaResumen = document.querySelector('table');
 
-formulario.addEventListener('change', (event) => {
-const elemento = event.target;
-const nombreCampo = elemento.name;
-const valorCampo = elemento.value;
-
-const fila = tablaResumen.querySelector(`th:contains('${nombreCampo}')`);
-const celdaValor = fila.nextElementSibling;
-celdaValor.textContent = valorCampo;
+formulario.addEventListener('input', (event) => {
+    const { name, value } = event.target;
+    const celdas = tablaResumen.querySelectorAll(`td[data-campo="${name}"]`);
+    celdas.forEach(celda => {
+        celda.textContent = value;
+    });
 });
+
+function inicializarTabla() {}
+
+
 
 const botonJuego = document.getElementById('jugar-piedra-papel-tijera');
 const seccionJuego = document.getElementById('piedra-papel-tijera');
